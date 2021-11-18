@@ -1,0 +1,148 @@
+/*
+Created by Github user MohamedKone (https://github.com/Mohamedkone)
+Thanks for usign my navigation pack from my GitHub. After adding this code to your own you can keep or change the comments to your desire, if you want to add or update the original files to make it better go on the original GitHub repository.
+*/
+
+/*
+Margin is set to auto on certain element due to some browser initially giving a set margin to those elements
+*/
+body {
+  margin: auto;
+  position: relative;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+}
+
+/*
+.norm represent the header display when it is normal
+*/
+.norm {
+  display: grid;
+  grid-template-columns: 30% 50% 20%;
+  height: 100%;
+  width: 100%;
+}
+/*
+.sticky represent the header display when it is the user scroll.
+It is use by js to put the navigation bar on the side.
+*/
+.sticky {
+  height: 100%;
+  width: 182px;
+  position: fixed;
+  display: grid;
+  grid-template-rows: 15% 60% 10%;
+}
+
+/*
+If you use your own image you may have to change the logo img width to below to suit your image.
+*/
+.logo img {
+  width: 125px;
+}
+
+nav {
+  list-style-type: none;
+  align-items: center;
+  height: inherit;
+}
+/*
+.n-norm represent the nav display when it is normal the js file will not use it in the html when the header(navigation bar) is on the side after scroll
+*/
+.n-norm {
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row;
+}
+
+nav li {
+  width: 182px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 48px 0;
+}
+nav li:hover {
+  background-color: #fff;
+  color: #000;
+  transition-duration: 0.7s;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: #fff;
+}
+
+.login {
+  margin: auto;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.login h3 {
+  color: #000;
+  margin: auto;
+  padding: 10px 20px;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  nav li {
+    padding: 20px 0;
+    margin-top: 10px;
+  }
+  .norm {
+    grid-template-columns: initial;
+    grid-template-rows: 60% 20% 20%;
+    height: auto;
+    grid-row-gap: 10px;
+    padding: 0 0 20px 0;
+  }
+  .n-norm {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+  }
+  .burger {
+    display: block;
+  }
+
+  .n-norm {
+    display: none;
+    flex-flow: column;
+    margin-bottom: 10px;
+  }
+  .norm {
+    display: block;
+  }
+
+  .login {
+    display: none;
+    width: 30%;
+  }
+  /*
+This code below only keep the login text responsive when the screen width is less than 250px vut since most screens phone computer and tablets stops at 300px you dont really need the code bellow 
+*/
+  .login h3 {
+    padding: 10px 0px;
+  }
+}
