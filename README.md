@@ -1,6 +1,3 @@
-# snake_escape
-
-
 # Snake Escape
 
 ## Date: 11/18/2021
@@ -29,9 +26,11 @@
 
 ### ***Getting Started***
 
-##### Sign up and sign in as a new user and then walk through the Ranger creation page to begin your warband.
-##### A Trello board was used to keep track of development progress and can be viewed [here](URL).
-##### The project itself was deployed and can be viewed [here](URL).
+##### Navigate the grid by using the arrow or WASD keys.
+##### Collect rats to get bigger
+##### After collecting 10*n rats the player acces the next level
+##### A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/yrrXbFhr/gameproject).
+##### The project itself ill be deployed and available [Will be updated later].
 ***
 ### ***Screenshots***
 
@@ -43,15 +42,10 @@
 
 ### ***Future updates***
 
-- [ ] Future update 1
-- [ ] Future update 2
-- [x] Completed update
-- [x] ~~Strikethrough~~ Items also
-***
+- [ ] Not Planned yet
 
 ### ***Credits***
 
-##### Funny Images: [DuckDuckGo Search](https://duckduckgo.com/?q=weird+food&t=h_&iax=images&ia=images)
+
 ##### Markdown Guide: [ia.net](https://ia.net/writer/support/general/markdown-guide)
 ##### Markdown Cheatsheet: [Github](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
-##### Markdown Tutorial: [Youtube](https://www.youtube.com/watch?v=HUBNt18RFbo&t=640s)
