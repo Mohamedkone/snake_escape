@@ -76,8 +76,21 @@ nav li:hover {
 }
 a {
   text-decoration: none;
+  color: #fff;
 }
 a:visited {
+  color: #fff;
+}
+a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+a:focus {
+  text-decoration: none;
+  color: #fff;
+}
+a:active {
+  text-decoration: none;
   color: #fff;
 }
 
