@@ -41,9 +41,50 @@ const snake = () =>{
     ctx.fillRect(snakeHeadX * tile , snakeHeadY * tile, tileSize, tileSize)
 }
 
+const direction = (e) =>{
+    if (current != e) {
+    
+    switch (e) {
+        case 38:
+            yMove = -.5
+            xMove = 0
+            current = e
+            console.log(current)
+            snakePosition()
+            break;
+        case 40:
+            yMove = .5
+            xMove = 0
+            current = e
+            console.log(e)
+            snakePosition()
+            break;
+        case 37:
+            yMove = 0
+            xMove = -.5
+            current = e
+            console.log(e)
+            snakePosition()
+            break;
+        case 39:
+            yMove = 0
+            xMove = .5
+            current = e
+            console.log(e)
+            snakePosition()
+            break;
+    
+        default:
+            break;
+    }
+}
+
+}
 
 startGame()
 
-
+document.body.addEventListener('keydown', (event)=>{
+    direction(event.keyCode)
+})
 
 
