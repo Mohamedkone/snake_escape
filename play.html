@@ -15,7 +15,7 @@
 </head>
 
 <body onscroll="vasy()" onresize="eee()">
-    <header class="norm">
+    <!-- <header class="norm">
         <div class="top">
             <div class="logo">
                 <img src="./assets/logo.svg" alt="">
@@ -33,29 +33,32 @@
             </a>
             <li>About</li>
         </nav>
-    </header>
+    </header> -->
     <section class="main">
-        <button id="play" class="hide">Play</button>
-        <section id="menu">
-            <div id="ratCount">
-                <img src="./assets/rat-svgrepo-com.svg" alt="">
-                <span>:</span>
-                <p>0</p>
-            </div>
-            <div id="levelText">
-                <p>Level </p>
-                <p id="level">1</p>
-            </div>
-            <div id="death">
-                <img src="./assets/skull.svg" alt="">
-                <span>:</span>
-                <p>0</p>
-            </div>
-        </section>
-        <section id="board"></section>
+        <button id="play" class="hide" onclick="">Play</button>
+        <div id="game" class="">
+            <section id="menu">
+                <div id="ratCount">
+                    <img src="./assets/rat-svgrepo-com.svg" alt="">
+                    <span>:</span>
+                    <p>0</p>
+                </div>
+                <div id="levelText">
+                    <p>Level </p>
+                    <p id="level">1</p>
+                </div>
+                <div id="death">
+                    <img src="./assets/skull.svg" alt="">
+                    <span>:</span>
+                    <p>0</p>
+                </div>
+            </section>
+            <canvas id="board" height="600" width="600"></canvas>
+        </div>
     </section>
 
     <script src="./nav.js"></script>
+    <script src="./one.js"></script>
 
 </body>
 
