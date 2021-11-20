@@ -15,6 +15,17 @@ let tile = 30
 let tileSize= board.width / tile - 2 
 
 
+const playB = document.getElementById('play')
+const game = document.getElementById('game')
+
+const setUp = () => {
+    playB.classList.remove("show")
+    playB.classList.add("hide")
+    game.classList.remove("hide")
+    game.classList.add("show")
+
+}
+
 const startGame = () =>{
     if (snakeHeadX * tile > 580 || snakeHeadX * tile < 15 || snakeHeadY * tile < 15 || snakeHeadY * tile > 580) {
         console.log('You lost')
