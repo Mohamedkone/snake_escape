@@ -18,18 +18,23 @@ let tileSize= board.width / tile - 2
 
 const playB = document.getElementById('play')
 const game = document.getElementById('game')
+const ffff = document.getElementById("gameOver")
 
 
     playB.classList.remove("show")
     playB.classList.add("hide")
+    ffff.classList.add("hide")
     game.classList.remove("hide")
     game.classList.add("show")
 
-
+const decision = () =>{
+   
+   ffff.classList.remove("hide")
+}
 
 const startGame = () =>{
     if (snakeHeadX * tile > 580 || snakeHeadX * tile < 15 || snakeHeadY * tile < 15 || snakeHeadY * tile > 580) {
-        setUp()
+        decision()
     } else {
         
     clearCanvas()
@@ -42,13 +47,13 @@ const startGame = () =>{
 
 const clearCanvas= () =>{
     
-    ctx.fillStyle = 'rgba(0,0,0,0)';
+    ctx.fillStyle = '#e04c3e';
     ctx.fillRect(0,0,board.width,board.height)
     ctx.drawImage(img,0,0,600,600)
 }
 let img = new Image()
 img.src = "./assets/soil.jpg"
-img.addEventListener("load",clearCanvas())
+img.addEventListener("",clearCanvas())
 const snakePosition = () =>{
     snakeHeadX = snakeHeadX + xMove
     snakeHeadY = snakeHeadY + yMove
@@ -105,4 +110,7 @@ document.body.addEventListener('keydown', (event)=>{
     direction(event.keyCode)
 })
 
+}
+const quit = () => {
+    window.location.href = "index.html"
 }

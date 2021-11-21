@@ -35,8 +35,8 @@
         </nav>
     </header> -->
     <section class="main">
-        <button id="play" class="hide" onclick="setUp()">Play</button>
-        <div id="game" class="">
+        <button id="play" class="show" onclick="setUp()">Play</button>
+        <div id="game" class="hide">
             <section id="menu">
                 <div id="ratCount">
                     <img src="./assets/rat-svgrepo-com.svg" alt="">
@@ -55,9 +55,9 @@
             </section>
             <div class="can">
                 <canvas id="board" height="600" width="600"></canvas>
-                <div class="gameOver">
-                    <button id="over">Restart</button>
-                    <button id="leave">Quit</button>
+                <div id="gameOver" class="hide">
+                    <button id="over" onclick="setUp()">Restart</button>
+                    <button id="leave" onclick="quit()">Quit</button>
                 </div>
             </div>
 
