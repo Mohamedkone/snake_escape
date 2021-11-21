@@ -13,9 +13,9 @@
 #play {
   font-size: 40px;
   font-weight: bolder;
-  color: #fff;
+  color: #9fa5ea;
   padding: 20px 40px;
-  border: 5px solid #fff;
+  border: 5px solid #9fa5ea;
   border-radius: 2%;
   background: none;
   animation: button 1s linear 0s infinite alternate;
@@ -68,12 +68,41 @@ span {
 #levelText p {
   margin: 0;
 }
-
+.can {
+  position: relative;
+}
 #board {
+  position: relative;
   margin: auto;
-  box-shadow: 1px 1px 10px 5px #fff;
+  box-shadow: 1px 1px 10px 5px #9fa5ea;
   display: grid;
   grid-template-rows: repeat(21, 1fr);
   grid-template-columns: repeat(21, 1fr);
   border: 10px double #aa0000;
+}
+.gameOver {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 620px;
+  width: 620px;
+  background: rgb(224, 76, 62, 0.2);
+}
+#over,
+#leave {
+  border: 3px solid #9fa5ea;
+  width: 40%;
+  border-radius: 7px;
+  background: none;
+  color: #9fa5ea;
+  font-weight: bolder;
+  font-size: 30px;
+  margin: 20px;
+  padding: 10px;
 }

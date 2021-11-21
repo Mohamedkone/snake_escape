@@ -1,3 +1,4 @@
+const setUp = () => {
 const board = document.getElementById('board');
 const ctx = board.getContext('2d')
 
@@ -18,17 +19,17 @@ let tileSize= board.width / tile - 2
 const playB = document.getElementById('play')
 const game = document.getElementById('game')
 
-const setUp = () => {
+
     playB.classList.remove("show")
     playB.classList.add("hide")
     game.classList.remove("hide")
     game.classList.add("show")
 
-}
+
 
 const startGame = () =>{
     if (snakeHeadX * tile > 580 || snakeHeadX * tile < 15 || snakeHeadY * tile < 15 || snakeHeadY * tile > 580) {
-        console.log('You lost')
+        setUp()
     } else {
         
     clearCanvas()
@@ -38,17 +39,23 @@ const startGame = () =>{
     }
 }
 
+
 const clearCanvas= () =>{
-    ctx.fillStyle = '#6d76df';
+    
+    ctx.fillStyle = 'rgba(0,0,0,0)';
     ctx.fillRect(0,0,board.width,board.height)
+    ctx.drawImage(img,0,0,600,600)
 }
+let img = new Image()
+img.src = "./assets/soil.jpg"
+img.addEventListener("load",clearCanvas())
 const snakePosition = () =>{
     snakeHeadX = snakeHeadX + xMove
     snakeHeadY = snakeHeadY + yMove
     
 }
 const snake = () =>{
-    ctx.fillStyle = '#859241'
+    ctx.fillStyle = '#85e241'
     ctx.fillRect(snakeHeadX * tile , snakeHeadY * tile, tileSize, tileSize)
 }
 
@@ -98,4 +105,4 @@ document.body.addEventListener('keydown', (event)=>{
     direction(event.keyCode)
 })
 
-
+}
