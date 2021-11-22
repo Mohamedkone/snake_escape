@@ -52,3 +52,28 @@ function eee(){
     header.classList.add("norm");
     }
 }
+let ttt = 0
+const change = () =>{
+    if (ttt == 0) {
+        document.documentElement.style.setProperty('--backgroundColor', '#000');
+        document.documentElement.style.setProperty('--textColor', '#fff');
+        document.documentElement.style.setProperty('--backgroundBColor', '#000');
+        document.documentElement.style.setProperty('--backgroundHColor', '#000');
+        document.documentElement.style.setProperty('--mainColor', '#fff');
+        document.documentElement.style.setProperty('--board', '#4990b6');
+        document.documentElement.style.setProperty('--hoverColor', '#000');
+        document.querySelector('#switch img').src = './assets/sun.svg'
+        ttt += 1
+    }else{
+        document.documentElement.style.setProperty('--backgroundColor', '#fff');
+        document.documentElement.style.setProperty('--textColor', '#000');
+        document.documentElement.style.setProperty('--backgroundBColor', '#fff');
+        document.documentElement.style.setProperty('--backgroundHColor', '#DBDBDB');
+        document.documentElement.style.setProperty('--mainColor', '#000');
+        document.documentElement.style.setProperty('--board', '#e67065');
+        document.documentElement.style.setProperty('--hoverColor', '#fff');
+        document.querySelector('#switch img').src = './assets/moon.png'
+        ttt -= 1
+    }
+    
+}

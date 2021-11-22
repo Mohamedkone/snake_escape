@@ -1,5 +1,15 @@
+:root {
+  --textColor: #000;
+  --backgroundColor: #fff;
+  --backgroundBColor: #fff;
+  --backgroundHColor: rgb(219, 219, 219);
+  --mainColor: #000;
+  --board: #e67065;
+  --hoverColor: #fff
+}
+
 body {
-  background: #000;
+  background: var(--backgroundBColor);
 }
 
 .main {
@@ -10,4 +20,3 @@ body {
   color: #fff;
   height: 80vh;
 }
-

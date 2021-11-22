@@ -6,6 +6,7 @@
     font-size: 30px;
   }
 }
+
 .main {
   padding: 20px;
 }
@@ -13,9 +14,10 @@
 #play {
   font-size: 40px;
   font-weight: bolder;
-  color: #9fa5ea;
+
+  color: var(--mainColor);
   padding: 20px 40px;
-  border: 5px solid #9fa5ea;
+  border: 2px solid var(--mainColor);
   border-radius: 2%;
   background: none;
   animation: button 1s linear 0s infinite alternate;
@@ -30,7 +32,7 @@
 }
 
 #menu {
-  background: #4990b6;
+  background: var(--board);
   width: 100%;
   height: 100px;
   font-size: 50px;
@@ -39,6 +41,7 @@
   align-items: center;
   justify-content: space-around;
   font-family: "Leckerli One", cursive;
+  
 }
 
 #ratCount,
@@ -75,7 +78,7 @@ span {
 #board {
   position: relative;
   margin: auto;
-  box-shadow: 1px 1px 10px 5px #4990b6;
+  box-shadow: 1px 1px 10px 5px var(--board);
   display: grid;
   grid-template-rows: repeat(21, 1fr);
   grid-template-columns: repeat(21, 1fr);
@@ -97,11 +100,11 @@ span {
 }
 #over,
 #leave {
-  border: 3px solid #4990b6;
+  border: 3px solid #fff;
   width: 40%;
   border-radius: 7px;
   background: none;
-  color: #4990b6;
+  color: #fff;
   font-weight: bolder;
   font-size: 30px;
   margin: 20px;
@@ -112,6 +115,6 @@ span {
 #over:hover,
 #leave:hover {
   color: #fff;
-  border-color: #6fa8c6;
-  background: #6fa8c6;
+  border-color: var(--board);
+  background: var(--board);
 }

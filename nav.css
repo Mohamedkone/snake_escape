@@ -6,6 +6,7 @@ Thanks for usign my navigation pack from my GitHub. After adding this code to yo
 /*
 Margin is set to auto on certain element due to some browser initially giving a set margin to those elements
 */
+
 body {
   margin: auto;
   position: relative;
@@ -13,11 +14,22 @@ body {
 }
 
 header {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--backgroundHColor);
+  color: var(--textColor);
   align-items: center;
   text-align: center;
-  border-bottom: 1px solid #fff;
+  border-bottom: 2px solid var(--mainColor);
+}
+
+#switch {
+  border: none;
+  width: 50px;
+  outline: none;
+  background: none;
+  margin: auto;
+}
+#switch img{
+  width: 40px;
 }
 
 /*
@@ -25,7 +37,7 @@ header {
 */
 .norm {
   display: grid;
-  grid-template-columns:  40vw 60vw;
+  grid-template-columns: 30vw 50vw 20vw;
   height: 100%;
   width: 100%;
 }
@@ -69,40 +81,29 @@ nav li {
   padding: 48px 0;
 }
 nav li:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: var(--textColor);
+  color: var(--hoverColor);
   transition-duration: 0.7s;
   cursor: pointer;
 }
 a {
   text-decoration: none;
-  color: #fff;
+  color: var(--textColor);
 }
 a:visited {
-  color: #fff;
+  color: var(--textColor);
 }
 a:hover {
   text-decoration: none;
-  color: #fff;
+  color: var(--textColor);
 }
 a:focus {
   text-decoration: none;
-  color: #fff;
+  color: var(--textColor);
 }
 a:active {
   text-decoration: none;
-  color: #fff;
-}
-
-.login {
-  margin: auto;
-  background-color: #fff;
-  border-radius: 20px;
-}
-.login h3 {
-  color: #000;
-  margin: auto;
-  padding: 10px 20px;
+  color: var(--textColor);
 }
 
 .burger {
@@ -146,15 +147,7 @@ a:active {
   .norm {
     display: block;
   }
-
-  .login {
-    display: none;
-    width: 30%;
-  }
   /*
 This code below only keep the login text responsive when the screen width is less than 250px vut since most screens phone computer and tablets stops at 300px you dont really need the code bellow 
 */
-  .login h3 {
-    padding: 10px 0px;
-  }
 }
