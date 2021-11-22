@@ -25,7 +25,7 @@ header {
 */
 .norm {
   display: grid;
-  grid-template-columns: 30% 50% 20%;
+  grid-template-columns:  40vw 60vw;
   height: 100%;
   width: 100%;
 }
@@ -117,7 +117,6 @@ a:active {
   }
   .norm {
     grid-template-columns: initial;
-    grid-template-rows: 60% 20% 20%;
     height: auto;
     grid-row-gap: 10px;
     padding: 0 0 20px 0;

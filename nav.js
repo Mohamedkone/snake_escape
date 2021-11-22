@@ -1,3 +1,5 @@
+/*This code is ES5 and need to be updated to ES6+ */
+
 var header = document.getElementsByTagName("header")[0];
 var burger = document.getElementById("burger");
 var nav = document.getElementById("nav");
@@ -8,13 +10,11 @@ the user is using a small screen
 */
 function toggle(){
 
-    if (nav.style.display == "flex" && login.style.display == "block" ){
+    if (nav.style.display == "flex"){
         nav.style.display = "";
-        login.style.display = "";
     }
     else{
         nav.style.display = "flex";
-        login.style.display = "block";
     }
     
 };

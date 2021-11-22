@@ -155,6 +155,7 @@ document.body.addEventListener('keydown', (event)=>{
 })
 document.getElementById("eat").innerText = eat
 
+
 }
 const quit = () => {
     window.location.href = "index.html"
