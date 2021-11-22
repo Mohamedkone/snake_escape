@@ -13,9 +13,10 @@ let randomXp = randomX -15
 let randomXps = randomX +15
 let randomYp = randomY - 15
 let randomYps = randomY + 15
-
+let ccc
+let yyu
 let eat = 0
-let speed = 20
+let speed = 15
 //snake head size
 let snakeHeadX = 10
 let snakeHeadY = 10
@@ -56,6 +57,19 @@ const startGame = () =>{
     } else {
        
     clearCanvas()
+    if (eat == 11) {
+        ratImg.src ="./assets/rat_red.svg"
+    }else if(eat ==31){
+        ratImg.src ="./assets/rat_blue.svg"
+    }else{
+        ratImg.src ="./assets/rat.svg"
+    }
+    if (eat >11) {
+        speed = 30
+    }
+    if (eat>31 && eat<35) {
+        speed = 2
+    }
     rat1()
     snakePosition()
     snake()
@@ -71,13 +85,11 @@ const startGame = () =>{
         randomYp = randomY - 15
         randomYps = randomY + 15
     }
+    
     setTimeout(startGame, 1000/ speed)
     }
 }
 
-const eatRat =() =>{
-
-}
 
 
 const clearCanvas= () =>{
@@ -102,17 +114,28 @@ const snake = () =>{
 }
 const rat1 = () => {
     ctx.drawImage(ratImg,randomX,randomY,25,25)
-    console.log(randomX,randomY)
 }
+ccc = Math.floor(Math.random() * (550 - 40) + 40)
+yyu = Math.floor(Math.random() * (550 - 40) + 40)
+const rat2 = () => {
+    ctx.drawImage(ratImg2,ccc,yyu,30,30)
+}
+
+
+
 let ratImg = new Image()
 ratImg.src = "./assets/rat.svg"
 img.addEventListener("",rat1())
+let ratImg2 = new Image()
+ratImg2.src = "./assets/rat_red.svg"
+img.addEventListener("",rat2())
 
 const direction = (e) =>{
     if (current != e) {
     
     switch (e) {
         case 38:
+        case 87:
             yMove = -.5
             xMove = 0
             current = e
@@ -120,6 +143,7 @@ const direction = (e) =>{
             snakePosition()
             break;
         case 40:
+        case 83:
             yMove = .5
             xMove = 0
             current = e
@@ -127,6 +151,7 @@ const direction = (e) =>{
             snakePosition()
             break;
         case 37:
+        case 65:
             yMove = 0
             xMove = -.5
             current = e
@@ -134,6 +159,7 @@ const direction = (e) =>{
             snakePosition()
             break;
         case 39:
+        case 68:
             yMove = 0
             xMove = .5
             current = e
@@ -152,6 +178,7 @@ startGame()
 
 document.body.addEventListener('keydown', (event)=>{
     direction(event.keyCode)
+    console.log(event.keyCode)
 })
 document.getElementById("eat").innerText = eat
 
