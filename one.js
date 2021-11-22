@@ -1,21 +1,21 @@
 
 let death = 0
-let eat = 0
 
 
-class rats {
-    constructor(){
-        this.drawImage = ctx.drawImage(ratImg,20,20,150,150)
-        this.power = 1
-
-    }
-}
 
 const setUp = () => {
-const board = document.getElementById('board');
+const board = document.getElementById('board')
 const ctx = board.getContext('2d')
 
-let speed = 10
+let randomX =  Math.floor(Math.random() * (550 - 40) + 40)
+let randomY =  Math.floor(Math.random() * (550 - 40) + 40)
+let randomXp = randomX -15
+let randomXps = randomX +15
+let randomYp = randomY - 15
+let randomYps = randomY + 15
+
+let eat = 0
+let speed = 20
 //snake head size
 let snakeHeadX = 10
 let snakeHeadY = 10
@@ -46,8 +46,10 @@ const decision = () =>{
    ffff.classList.remove("hide")
 }
 
+
+
 const startGame = () =>{
-    if (snakeHeadX * tile > 580 || snakeHeadX * tile < 15 || snakeHeadY * tile < 15 || snakeHeadY * tile > 580) {
+    if (snakeHeadX * tile > 580 || snakeHeadX * tile < 0 || snakeHeadY * tile < 0 || snakeHeadY * tile > 580) {
         decision()
         death += 1
         document.getElementById("deathCount").innerText = death
@@ -57,15 +59,25 @@ const startGame = () =>{
     rat1()
     snakePosition()
     snake()
-    if (snakeHeadX * tile == 120 && snakeHeadX * tile == 120) {
+    console.log(snakeHeadX * tile ,snakeHeadY * tile)
+    if (snakeHeadX * tile > randomXp && snakeHeadX * tile < randomXps && snakeHeadY * tile > randomYp && snakeHeadY * tile < randomYps) {
         eat += 1
         console.log("yyy")
         document.getElementById("eat").innerText = eat
+        randomX =  Math.floor(Math.random() * (550 - 40) + 40)
+        randomY =  Math.floor(Math.random() * (550 - 40) + 40)
+        randomXp = randomX -15
+        randomXps = randomX +15
+        randomYp = randomY - 15
+        randomYps = randomY + 15
     }
     setTimeout(startGame, 1000/ speed)
     }
 }
 
+const eatRat =() =>{
+
+}
 
 
 const clearCanvas= () =>{
@@ -80,14 +92,17 @@ img.addEventListener("",clearCanvas())
 const snakePosition = () =>{
     snakeHeadX = snakeHeadX + xMove
     snakeHeadY = snakeHeadY + yMove
+
     
 }
 const snake = () =>{
     ctx.fillStyle = '#85e241'
     ctx.fillRect(snakeHeadX * tile , snakeHeadY * tile, tileSize, tileSize)
+    
 }
 const rat1 = () => {
-    ctx.drawImage(ratImg,100,100,30,30)
+    ctx.drawImage(ratImg,randomX,randomY,25,25)
+    console.log(randomX,randomY)
 }
 let ratImg = new Image()
 ratImg.src = "./assets/rat.svg"
@@ -138,6 +153,7 @@ startGame()
 document.body.addEventListener('keydown', (event)=>{
     direction(event.keyCode)
 })
+document.getElementById("eat").innerText = eat
 
 }
 const quit = () => {
