@@ -5,7 +5,7 @@
   --backgroundHColor: rgb(219, 219, 219);
   --mainColor: #000;
   --board: #e67065;
-  --hoverColor: #fff
+  --hoverColor: #fff;
 }
 
 body {
@@ -18,5 +18,32 @@ body {
   justify-content: center;
   align-items: center;
   color: var(--mainColor);
-  height: 80vh;
+}
+.main h1 {
+  font-size: 35px;
+}
+.main h3 {
+  font-size: 30px;
+}
+
+.story {
+  width: 52%;
+  margin: auto;
+  text-align: center;
+  font-size: 28px;
+}
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card {
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid var(--mainColor);
+  border-radius: 10px;
+  width: 20%;
+}
+.card img {
+  width: 100px;
 }

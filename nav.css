@@ -10,7 +10,7 @@ Margin is set to auto on certain element due to some browser initially giving a 
 body {
   margin: auto;
   position: relative;
-  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  font-family: "Leckerli One", cursive;
 }
 
 header {
