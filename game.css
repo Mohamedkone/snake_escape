@@ -9,6 +9,7 @@
 
 .main {
   padding: 20px;
+  min-height: 70vh;
 }
 
 #play {
@@ -41,7 +42,6 @@
   align-items: center;
   justify-content: space-around;
   font-family: "Leckerli One", cursive;
-  
 }
 
 #ratCount,
