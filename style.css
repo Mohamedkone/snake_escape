@@ -17,6 +17,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: var(--mainColor);
   height: 80vh;
 }

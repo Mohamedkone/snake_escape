@@ -61,6 +61,8 @@ const startGame = () =>{
         ratImg.src ="./assets/rat_red.svg"
     }else if(eat ==31){
         ratImg.src ="./assets/rat_blue.svg"
+    }else if(eat ==40){
+        ratImg.src ="./assets/rat_white.svg"
     }else{
         ratImg.src ="./assets/rat.svg"
     }
@@ -69,6 +71,12 @@ const startGame = () =>{
     }
     if (eat>31 && eat<35) {
         speed = 2
+    }
+    if (eat>40) {
+        speed = 60
+    }
+    if (eat == 100) {
+        level2()
     }
     rat1()
     snakePosition()
@@ -188,7 +196,12 @@ window.addEventListener("keydown", function(e) {
     }
 }, false);
 
+const level2=()=>{
+    //Since no one will ever get here there's no need to create it
 }
+
+}
+
 const quit = () => {
     window.location.href = "index.html"
 }
