@@ -23,21 +23,21 @@ This function determine if the user windowns is bigger than 900px if yes
 it will change the class of header and nav so it can get fixed on the left
 when user scroll down pass 100px on the Y axes.
 */
-function vasy(){
-    var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-    if(viewportWidth > 900){
-    if (window.pageYOffset >= 100) {
-        header.classList.add("sticky");
-        header.classList.remove("norm");
-        nav.classList.remove("n-norm");
-        }
-    else {
-        nav.classList.add("n-norm");
-        header.classList.remove("sticky");
-        header.classList.add("norm");
-        }
-    }
-}
+// function vasy(){
+//     var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+//     if(viewportWidth > 900){
+//     if (window.pageYOffset >= 100) {
+//         header.classList.add("sticky");
+//         header.classList.remove("norm");
+//         nav.classList.remove("n-norm");
+//         }
+//     else {
+//         nav.classList.add("n-norm");
+//         header.classList.remove("sticky");
+//         header.classList.add("norm");
+//         }
+//     }
+// }
 
 /*
 This line is only important if a screen get resize and the navigation bar

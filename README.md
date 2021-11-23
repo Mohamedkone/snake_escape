@@ -17,6 +17,7 @@
 ### **_Technology Used_**
 
 - HTML
+  - Canvas
 - CSS
 - Javascript
 - Chrome
@@ -24,6 +25,8 @@
 - Git
   - GitHub
 - VsCode
+- Adobe illustrator
+
 
 ### **_Getting Started_**
 

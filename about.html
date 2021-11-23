@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body onscroll="" onresize="eee()">
+    <header class="norm">
+        <div class="top">
+            <div class="logo">
+                <img src="assets/logo.svg" alt="">
+            </div>
+            <div id="burger" class="burger" onclick="toggle()">
+                <img id="www" src="./assets/burger_w.svg" alt="">
+            </div>
+        </div>
+        <nav id="nav" class="n-norm">
+            <a href="./index.html">
+                <li> Home</li>
+            </a>
+            <a href="./play.html">
+                <li> Play</li>
+            </a>
+            <a href="./about.html">
+                <li>About</li>
+            </a>
+
+        </nav>
+        <button id="switch" onclick="change()"><img src="./assets/moon.png" alt=""></button>
+    </header>
+    <section class="main">
+        <h1>Snake Escape</h1>
+        <h3>By Mohamed Kone</h3>
+        <div class="pops">
+            <a href="https://github.com/Mohamedkone" target="_blank">
+                <div class="pop pop1">
+                    <img src="./assets/logo-github.png" alt="">
+                    <p>GitHub</p>
+                </div>
+            </a>
+            <a href="https://www.dev.mohamedkone.com/" target="_blank">
+                <div class="pop pop2">
+                    <img src="./assets/global.png" alt="">
+                    <p>Developer website</p>
+                </div>
+            </a>
+            <a href="https://www.art.mohamedkone.com/" target="_blank">
+                <div class="pop pop3">
+                    <img src="./assets/art-log.png" alt="">
+                    <p>Art website</p>
+                </div>
+            </a>
+
+        </div>
+    </section>
+    <script src="./nav.js"></script>
+</body>
+
+</html>

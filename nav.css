@@ -10,7 +10,6 @@ Margin is set to auto on certain element due to some browser initially giving a 
 body {
   margin: auto;
   position: relative;
-  font-family: "Leckerli One", cursive;
 }
 
 header {
@@ -76,9 +75,9 @@ nav {
 
 nav li {
   width: 182px;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
-  padding: 48px 0;
+  padding: 30px 0;
 }
 nav li:hover {
   background-color: var(--textColor);
